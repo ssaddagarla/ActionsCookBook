@@ -11,11 +11,11 @@ body:
   - type: input
     id: name
     attributes:
-    label: 'Name'
-    description: 'Name of the repository in lower-case and kebab casing.'
-    placeholder: 'your-name-kebab'
+      label: 'Name'
+      description: 'Name of the repository in lower-case and kebab casing.'
+      placeholder: 'your-name-kebab'
     validations:
-    required: true
+      required: true
   - type: dropdown
     id: department
     attributes:

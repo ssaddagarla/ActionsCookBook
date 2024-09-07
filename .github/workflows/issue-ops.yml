@@ -24,8 +24,8 @@ jobs:
              repo_full_name=$repo_dept-$repo_name
              echo "REPO_NAME=$repo_full_name" >> "$GITHUB_OUTPUT"
     mention="@${{ github.event.issue.user.login }}: "
-    message="Requested repository will be sent for approval."
-     exitcode=0
+    # message = "Requested repository will be sent for approval."
+    exitcode=0
     # shall not be empty
       if [ -z $repo_full_name ]; then
         message="Repository name is empty.";

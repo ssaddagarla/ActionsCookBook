@@ -25,7 +25,7 @@ jobs:
             yml,line=18,endline=21::A lot of messages"
             echo "::error title=Script Injection,file=.github/workflows/
             DevelopInBranch.yml,line=19,col=37,endColumn=68::Potential
-            script injection     
+            script injection"     
       - uses: actions/checkout@v4.1.0
       - uses: devops-actions/actionlint@v0.1.2
       - run: echo "PR title is '${{ github.event.pull_request.title}}'."

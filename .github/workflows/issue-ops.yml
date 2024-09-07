@@ -18,14 +18,14 @@ jobs:
     id: repo-request
     env:
         GH_TOKEN: ${{ github.token }}
-        run: | 
+    run: | 
              repo_name=$(echo '${{ steps.parse.outputs.data }}' | jq -r'.name.text')
              repo_dept=$(echo '${{ steps.parse.outputs.data }}' | jq -r'.department.text')
              repo_full_name=$repo_dept-$repo_name
              echo "REPO_NAME=$repo_full_name" >> "$GITHUB_OUTPUT"
     mention="@${{ github.event.issue.user.login }}: "
-    message="Requested repository '$repo_full_name' will be sent for approval. "
-    exitcode=0
+    message="Requested repository will be sent for approval."
+     exitcode=0
     # shall not be empty
       if [ -z $repo_full_name ]; then
         message="Repository name is empty.";
